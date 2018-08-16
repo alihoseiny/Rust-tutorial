@@ -1,0 +1,24 @@
+# Rust-tutorial
+Examples and Exercises related to My Rust Programming Languag Tutorial.
+These files are related to [my Free Rust tutorial](http://blog.alihoseiny.ir/category/%d8%a2%d9%85%d9%88%d8%b2%d8%b4-%d8%b2%d8%a8%d8%a7%d9%86-%d8%a8%d8%b1%d9%86%d8%a7%d9%85%d9%87%e2%80%8c%d9%86%d9%88%db%8c%d8%b3%db%8c-rust/?utm_source=Github&utm_medium=Readme&utm_campaign=RustTutorial). 
+If you have questions abut codes, or have better solutions, please open an issue or contact me with salam@alihoseiny.ir.
+
+# آموزش زبان برنامه‌نویسی Rust
+در اینجا مثال‌ها و تمرین‌های مرتبط با
+
+
+[دوره‌ی آموزشی رایگان زبان‌برنامه‌نویسی
+Rust](http://blog.alihoseiny.ir/category/%d8%a2%d9%85%d9%88%d8%b2%d8%b4-%d8%b2%d8%a8%d8%a7%d9%86-%d8%a8%d8%b1%d9%86%d8%a7%d9%85%d9%87%e2%80%8c%d9%86%d9%88%db%8c%d8%b3%db%8c-rust/?utm_source=Github&utm_medium=Readme&utm_campaign=RustTutorial
+)
+
+
+را قرار می‌دهم.
+اگر درمورد کدهای هر بخش سؤالی داشتید یا راه حل بهتری به ذهنتان می‌رسد می‌توانید یک
+
+issue
+
+باز کنید یا به من ایمیل بدهید.
+
+آدرس ایمیل من: salam@alihoseiny.ir
+
+(به خاطر به‌هم ریختگی متن فارسی عذر می‌خواهم. ولی گیت‌هاب بهتر از این از فارسی پشتیبانی نمی‌کند)

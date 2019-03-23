@@ -1,47 +1,46 @@
+// خطوطی که به این شکل با دو "/" شروع می‌شوند کامنت هستند. یعنی توضیحاتی اضافی هستند و جزو کد محسوب نمی‌شوند
+// چون خطوط به هم می‌ریزند از این به بعد کامنت‌ها را انگلیسی می‌نویسم. ولی تمام تلاشم را می‌کنم که تا حد امکان ساده باشند
 
-//  خطوطی که این‌شکلی با دوتا / شروع می‌شوند کامنت هستند. یعنی توضیحاتی اضافی هستند و جزو کد محسوب نمی‌شوند
-// چون خطوط به هم می‌ریزند از این به بعد کامنت‌هارا انگلیسی می‌نویسم. ولی تمام تلاشم را می‌کنم که تا حد امکان ساده باشند.
-
-fn factorial_recursive(n: i32) -> i32{
-    if n < 2 {  // 0! and 1! both are equal to 1 and factorial only defined on not negative numbers
+fn factorial_recursive(n: i32) -> i32 {
+    if n <= 1 {
         return 1;
     }
-        n * factorial_recursive(n - 1)    // Like the arithmetic formula, n! = n * (n - 1 )!
+    
+    // Like the arithmetic formula:
+    // n! = n * (n - 1) * (n - 2) ... * 2 * 1
+    n * factorial_recursive(n - 1)
 }
 
+fn factorial_with_for(n: i32) -> i32 {
+    // Storing the result of (n - 1)
+    let mut result = 1;
 
-fn factorial_for(n: i32) -> i32{
-    let mut factorial_result = 1;      // Storing the result of the (n - 1)!
-                                          // Because 0! and 1! are equal to 1, we chose the
-                                          // 1 initial value for this variable.
-
-    for number in 1..n + 1 { // for looping in numbers from 1 to n, we should create a range from 1 to n + 1
-        factorial_result*= number;   // Creating the 1 * 2 * ... * n
+    // For looping in numbers from 1 to n, we should create a range from 1 to n + 1
+    for number in 1..n + 1 {
+        // Creating the: 1 * 2 * ... * n
+        result *= number;
     }
-    return factorial_result;
+
+    result
 }
-
-
-
-
 
 fn main() {
 
-    println!("factorial_recursive function results: ");
-    // \t is a tab character. Don't worry about it.
-    println!("\t{}! is equal to: {}", 0, factorial_recursive(0));
-    println!("\t{}! is equal to: {}", 1, factorial_recursive(1));
-    println!("\t{}! is equal to: {}", 5, factorial_recursive(5));
-    println!("\t{}! is equal to: {}", 7, factorial_recursive(7));
-    println!("\t{}! is equal to: {}", 10, factorial_recursive(10));
+    // "\t" is a tab
+    println!("factorial_recursive function results:");
+    println!("{}!\tis equal to:\t{}", 0, factorial_recursive(0));
+    println!("{}!\tis equal to:\t{}", 1, factorial_recursive(1));
+    println!("{}!\tis equal to:\t{}", 5, factorial_recursive(5));
+    println!("{}!\tis equal to:\t{}", 7, factorial_recursive(7));
+    println!("{}!\tis equal to:\t{}", 10, factorial_recursive(10));
 
-    println!("\n\n\n\n"); // Just adding 4 new lines to separating results printed in the terminal.
+    print!("\n"); // New line
 
-    println!("factorial_for function results: ");
-    // \t is a tab character. Don't worry about it.
-    println!("\t{}! is equal to: {}", 0, factorial_for(0));
-    println!("\t{}! is equal to: {}", 1, factorial_for(1));
-    println!("\t{}! is equal to: {}", 5, factorial_for(5));
-    println!("\t{}! is equal to: {}", 7, factorial_for(7));
-    println!("\t{}! is equal to: {}", 10, factorial_for(10));
+    println!("factorial_with_for function results:");
+    println!("{}!\tis equal to:\t{}", 0, factorial_with_for(0));
+    println!("{}!\tis equal to:\t{}", 1, factorial_with_for(1));
+    println!("{}!\tis equal to:\t{}", 5, factorial_with_for(5));
+    println!("{}!\tis equal to:\t{}", 7, factorial_with_for(7));
+    println!("{}!\tis equal to:\t{}", 10, factorial_with_for(10));
+
 }

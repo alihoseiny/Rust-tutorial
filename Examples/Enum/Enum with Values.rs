@@ -1,4 +1,4 @@
-Colour {
+enum Colour {
     RGB(u16, u16, u16),
     Hex(String)
 }

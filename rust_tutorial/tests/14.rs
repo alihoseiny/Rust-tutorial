@@ -23,6 +23,19 @@ mod test14 {
         Hex(String)
     }
 
+    fn get_pair(slice: &[i32]) -> (i32, i32) {
+        match slice {
+            [e1] => (*e1, *e1),
+            [e1, e2, .., e3, e4] => {
+                let average1 = (e1 + e2).pow(2);
+                let average2 = (e3 + e4).pow(2);
+                (average1, average2)
+            }
+            [e1, .., e2] => (*e1, *e2),
+            [] => (0, 0)
+        }
+    }
+
     #[test]
     fn test_match_literal_syntax() {
         let user_inputs: [u8;5] = [0, 1, 2, 3, 4];
@@ -235,4 +248,31 @@ mod test14 {
         print_point(Point(10, 10));
     }
 
+    macro_rules! slice_tests {
+        ($($name: ident: ($slice: expr, $expected_result: expr),) *) => {
+            $(
+                #[test]
+                fn $name() {
+                     let a = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+                     let test_slice = &a[$slice];
+                     let pair = get_pair(test_slice);
+                     assert_eq!(pair, $expected_result);
+                }
+            )*
+        }
+    }
+
+    slice_tests!{
+        test_slice_pattern_single: (0..1, (1, 1)),
+        test_slice_pattern_two: (..=1, (1, 2)),
+        test_slice_pattern_three: (..3, (1, 3)),
+        test_slice_pattern_more: (..=4, (9, 81)),
+        test_slice_pattern_all: (.., (9, 289)),
+    }
+
+    #[test]
+    fn test_slice_pattern_empty() {
+        let pair = get_pair(&[]);
+        assert_eq!(pair, (0, 0));
+    }
 }

@@ -2,7 +2,9 @@ fn main() {
     let num_of_rows = 9;    // number of rows we want
     let mut current_row = 1; // number of the row that we are printing right now.
     for column_counter in 0..num_of_rows { // We want 9 rows, so we should repeat the loop 9 times. column_counter value starts from 0 to 8
-        for star_counter in 0..current_row { // Before the middle, we should print n start in nth row (We change the row number for other rows below)
+        for _ in 0..current_row { // Before the middle, we should print n start in nth row (We change the row number for other rows below)
+            // Using the underscore(_) for the variable in the loop because i will not use it in the loop.
+            // Using underscore in this case prevents compiler warning about unused variable.
             print!("*"); // Print * without new line after it.
         }
         print!("\n"); // Just a new line after each column

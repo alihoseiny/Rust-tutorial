@@ -17,6 +17,4 @@ Rust](http://blog.alihoseiny.ir/category/%d8%a2%d9%85%d9%88%d8%b2%d8%b4-%d8%b2%d
 ) را قرار می‌دهم.
 اگر درمورد کدهای هر بخش سؤالی داشتید یا راه حل بهتری به ذهنتان می‌رسد می‌توانید یک [issue](https://github.com/alihoseiny/Rust-tutorial/issues/new) باز کنید یا به من [ایمیل](<salam@alihoseiny.ir>) بدهید
 
-(به خاطر به‌هم ریختگی متن فارسی عذر می‌خواهم. ولی گیت‌هاب بهتر از این از فارسی پشتیبانی نمی‌کند)
-
 </div>
